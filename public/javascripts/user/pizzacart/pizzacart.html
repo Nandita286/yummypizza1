@@ -1,0 +1,22 @@
+<CENTER>
+<h1>YOUR CART</h1>
+<table>
+      <tr ng-repeat="pizza in poCtrl.details">
+        <td>{{pizza.pname}}</td>
+        <br>
+        <td><img ng-src="{{pizza.pic}}" width="250"></td>
+        <br>
+        <td>&#8377{{pizza.rate}}</td>
+        <br>
+        <td>{{pizza.qty}}</td>
+        <td >cost:&#8377{{pizza.cost}}</td>
+        </tr> 
+
+
+    </table>
+    <p>TOTAL AMOUNT:{{poCtrl.total}}</p>
+
+    <a href="#/placeorder">Place order</a>
+    <a href="#/">back</a>
+    
+</CENTER>

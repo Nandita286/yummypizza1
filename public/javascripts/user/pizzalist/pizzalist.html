@@ -1,0 +1,17 @@
+Search:<input id="s" ng-model="query.name" type="text"/>
+    <br><br>
+    <a href="#/cart">View Cart</a>
+  <center>
+
+        <h1>YUMMY PIZZA!</h1>
+    <table>
+      <tr ng-repeat="pizza in pCtrl.details1 | filter:query">
+        <td><a href="#/{{pizza.name}}">{{pizza.name}}</a></td>
+         <td><a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" width="150"></a></td>
+      </tr>
+    </table>
+     <p>ADMIN LOGIN</p>
+      Username:<input type="text" ng-model="pCtrl.user">
+      Password:<input type="password" ng-model="pCtrl.password">
+      <button ng-click="pCtrl.login()">login</button>
+    </center>
