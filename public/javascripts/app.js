@@ -1,5 +1,5 @@
-(function(){angular.module('yummypizza', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'user', 'admin']);
-
+(function(){angular.module('yummypizza', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'user', 'admin'])
+                   .constant('portlink',"http://localhost:3000");
 angular.module('yummypizza').config(function($routeProvider) {
 
     /* Add New Routes Above */

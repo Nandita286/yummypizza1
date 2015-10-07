@@ -1,7 +1,7 @@
 <CENTER>
 <h1>YOUR CART</h1>
 <table>
-      <tr ng-repeat="pizza in poCtrl.details">
+      <tr ng-repeat="pizza in vm.details">
         <td>{{pizza.pname}}</td>
         <br>
         <td><img ng-src="{{pizza.pic}}" width="250"></td>
@@ -14,7 +14,7 @@
 
 
     </table>
-    <p>TOTAL AMOUNT:{{poCtrl.total}}</p>
+    <p>TOTAL AMOUNT:{{vm.total}}</p>
 
     <a href="#/placeorder">Place order</a>
     <a href="#/">back</a>

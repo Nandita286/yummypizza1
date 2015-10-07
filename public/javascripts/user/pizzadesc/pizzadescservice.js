@@ -12,6 +12,9 @@
       this.p3=function(){
         return total;
       };
+      this.p4=function(){
+        plist.splice(0,plist.length);
+      };
     }
     angular.module('user')
            .service('pizzadescserv', pizzadescserv);

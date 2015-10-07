@@ -1,12 +1,12 @@
   (function(){
-function pizzaorderservice($http){
+function pizzaorderservice($http,portlink){
      
       
       this.pizzaorder=function(postuser){
         
         return $http({
           method  : 'POST',
-          url     : 'http://localhost:3000/pizzaorder',
+          url     : portlink+'/pizzaorder',
           data    : postuser, 
           headers : {'Content-Type': 'application/json'} 
          });

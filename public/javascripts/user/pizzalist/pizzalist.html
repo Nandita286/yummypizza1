@@ -1,17 +1,48 @@
-Search:<input id="s" ng-model="query.name" type="text"/>
-    <br><br>
-    <a href="#/cart">View Cart</a>
-  <center>
-
-        <h1>YUMMY PIZZA!</h1>
-    <table>
-      <tr ng-repeat="pizza in pCtrl.details1 | filter:query">
-        <td><a href="#/{{pizza.name}}">{{pizza.name}}</a></td>
-         <td><a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" width="150"></a></td>
-      </tr>
-    </table>
-     <p>ADMIN LOGIN</p>
-      Username:<input type="text" ng-model="pCtrl.user">
-      Password:<input type="password" ng-model="pCtrl.password">
-      <button ng-click="pCtrl.login()">login</button>
-    </center>
+<div style="padding:40px">
+    <div style="width:100%;float:initial"><center><h1>YUMMY PIZZA!</h1></center></div>
+    <div style="width:100%;padding:20px">
+        <div style="float:left">
+            <button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Admin Login</button>
+        </div>
+        <div style="float:right">
+            <a href="#/cart">View Cart</a>&nbsp&nbsp&nbsp
+            Search:<input id="s" ng-model="query.name" type="text"/>    
+        </div>
+        
+        
+    </div>
+    <div collapse="isCollapsed" style="width:100%;padding:20px">
+        <center>
+            <div class="well well-lg">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<p>ADMIN LOGIN</p>
+                Username:<input type="text" ng-model="vm.user"><br/>
+                &nbspPassword:<input type="password" ng-model="vm.password"><br/>
+                <button ng-click="vm.login()">login</button>
+            </div>
+        </center>
+    </div>
+    <!-- <div style="width:100%;float:initial;padding:100px">
+        <center>
+            
+            <table>
+                <tr ng-repeat="pizza in vm.details1 | filter:query">
+                    <td><a href="#/{{pizza.name}}">{{pizza.name}}</a></td>
+                    <td><a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" width="150"></a></td>
+                </tr>
+            </table>
+            </br>
+        </center>
+    </div> -->
+    <!-- carousil starts -->
+    <div style="float:initial;position:relative;padding:50px;">
+        <div>
+            <carousel interval="2000" no-wrap="false" disable-animation="true">
+                <slide ng-repeat="pizza in vm.details1 | filter:query" active="slide.active">
+                    <a href="#/{{pizza.name}}"><img ng-src="{{pizza.image}}" style="margin:auto; width:47%; height:47% "></a>
+                    <a href="#/{{pizza.name}}"><p>{{pizza.name}}</p></a>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+    <!-- carousil ends -->
+</div>

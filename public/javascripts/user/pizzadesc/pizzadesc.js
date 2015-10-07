@@ -1,5 +1,5 @@
 (function(){
-function pizzaDetailsCtrl($routeParams, $http,pizzaserv,pizzadescserv){
+function pizzaDetailsCtrl($routeParams, $http,pizzaserv,pizzadescserv,$log){
         var vm=this;
         vm.user={};
         vm.user.flag1=false;
@@ -36,4 +36,4 @@ function pizzaDetailsCtrl($routeParams, $http,pizzaserv,pizzadescserv){
       }
        angular.module('user')
        .controller('pizzaDetailsCtrl',pizzaDetailsCtrl);
-      })();
+       })();

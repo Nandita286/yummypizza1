@@ -18,6 +18,11 @@
            <li>Cost:{{i.cost}}</li>
            </ul>
            </td>
-           <td><button ng-click="lctrl.delivered(pizza._id)">delivered</button></td>
+           <td><button ng-click="lctrl.delivered(pizza._id)">deliver</button></td>
            </tr>
            </table>
+           <div class="row" width="100%">
+        <div class="col-sm-5"><progressbar value="lctrl.deliverycount()">delivered orders</progressbar></div>
+     
+        <div class="col-sm-5"><progressbar class="progress-striped" value="lctrl.pendingcount()" type="warning">pending</progressbar></div>
+        </div>

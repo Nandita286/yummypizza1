@@ -1,13 +1,13 @@
 (function(){
-function adminviewserv($http){
+function adminviewserv($http,portlink){
 	this.view=function(){
-		return $http.get('http://localhost:3000/pizzaview');
+		return $http.get(portlink+'/pizzaview');
 	};
 	this.delivery=function(postid){
     console.log("httpyil",postid);
 	return $http({
           method  : 'POST',
-          url     : 'http://localhost:3000/update',
+          url     : portlink+'/update',
           data    : postid, 
           headers : {'Content-Type': 'application/json'} 
          });

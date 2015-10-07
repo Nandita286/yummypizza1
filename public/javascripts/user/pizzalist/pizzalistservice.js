@@ -1,9 +1,9 @@
 (function(){
 	
-       function pizzaserv($http){
+       function pizzaserv($http,portlink){
        
         this.getpizza=function(){
-        return $http.get('http://localhost:3000/pizza');
+        return $http.get(portlink+'/pizza');
     };
        }
        angular.module('user')

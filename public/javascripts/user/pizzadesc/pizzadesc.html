@@ -2,28 +2,28 @@
 
     <table>
         <tr>
-            <td>{{pdCtrl.pizza.name}}</td>
+            <td>{{vm.pizza.name}}</td>
         </tr>
         <br>
         <br>
         <tr>
-            <td><img ng-src="{{pdCtrl.pizza.image}}" width="250"></td>
+            <td><img ng-src="{{vm.pizza.image}}" width="250"></td>
         </tr>
         <br>
         <br>
         <tr>
-            <td>{{pdCtrl.pizza.description}}</td>
+            <td>{{vm.pizza.description}}</td>
         </tr>
          <br>
         <tr>
-            <td>&#8377{{pdCtrl.pizza.rate}}</td>
+            <td>&#8377{{vm.pizza.rate}}</td>
         </tr>
 </table>
 
 
     
-    Quantity:
-     <select ng-model="pdCtrl.user.qty" ng-click="pdCtrl.enter()">
+   Quantity:
+     <select ng-model="vm.user.qty" ng-click="vm.enter()">
             <option value="">select quantity</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -34,8 +34,10 @@
             <option value="7">7</option>
 
         </select>
+       
+
    
-    <span ng-show="pdCtrl.user.flag1"><a href="#/cart" ng-click="pdCtrl.order()">Order Now</a></span>
+    <span ng-show="vm.user.flag1"><a href="#/cart" ng-click="vm.order()">Order Now</a></span>
 
     </form>
 
