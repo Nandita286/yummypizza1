@@ -23,9 +23,9 @@
            </tr>
            </table>
            <div class="row" width="100%">
-        <div class="col-sm-5"><progressbar value="vm.deliverycount()">delivered orders</progressbar></div>
+        <div class="col-sm-5"><progressbar value="vm.deliverycount()" max="100">delivered orders</progressbar></div>
      
-        <div class="col-sm-5"><progressbar class="progress-striped" value="vm.pendingcount()" type="warning">pending</progressbar></div>
+        <div class="col-sm-5"><progressbar class="progress-striped" value="vm.pendingcount()" type="warning" max="100">pending</progressbar></div>
         </div>
         </span>
         <div>
