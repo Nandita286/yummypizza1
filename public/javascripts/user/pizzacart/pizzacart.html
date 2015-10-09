@@ -1,6 +1,8 @@
 <CENTER>
 <h1>YOUR CART</h1>
+ <span ng-show="vm.showmessage">Your cart is empty</span>
 <table>
+
       <tr ng-repeat="pizza in vm.details">
         <td>{{pizza.pname}}</td>
         <br>
@@ -11,12 +13,12 @@
         <td>{{pizza.qty}}</td>
         <td >cost:&#8377{{pizza.cost}}</td>
         </tr> 
-
-
     </table>
+    <span ng-show="!vm.showmessage">
+
     <p>TOTAL AMOUNT:{{vm.total}}</p>
 
     <a href="#/placeorder">Place order</a>
     <a href="#/">back</a>
-    
+    </span>
 </CENTER>

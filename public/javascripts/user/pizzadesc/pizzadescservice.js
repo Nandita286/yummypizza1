@@ -7,13 +7,14 @@
         total=total+user.cost;
       };
       this.p2=function(){
+       console.log("p2");
         return plist;
       };
       this.p3=function(){
         return total;
       };
       this.p4=function(){
-        plist.splice(0,plist.length);
+        plist=[];
       };
     }
     angular.module('user')

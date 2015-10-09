@@ -5,7 +5,8 @@
           vm.count=0;
           vm.pending=100;
           vm.processing=0;
-
+vm.showmessage1=false;
+       
   vm.random = function() {
     var value = Math.floor((Math.random() * 100) + 1);
     var type;
@@ -43,7 +44,9 @@
           adminviewserv.view().success(function (data){
           if(data === 'nothing'){
             vm.details={};
-            window.alert("No more orders to be delivered!");
+            //window.alert("No more orders to be delivered!");
+            vm.showmessage1=true;
+            vm.pending=0;
           }
             
           else{
@@ -52,13 +55,13 @@
             vm.dlength=vm.details.length;
           }
         });
+          
           vm.delivered=function(id){
             console.log("id",id);
             vm.postcontact={};
             vm.postcontact.pizzaid=id;
             vm.d=adminviewserv.delivery(vm.postcontact);
             vm.d.success(function(data) {
-            window.alert("successfully delivered");
             if (data.errors){
               vm.errorName = data.errors.name;
               vm.errorUserName = data.errors.username;
@@ -69,7 +72,9 @@
          adminviewserv.view().success(function (data) {
             if(data === 'nothing'){
               vm.details={};
-              window.alert("No more orders to be delivered!");
+             // window.alert("No more orders to be delivered!");
+            vm.showmessage1=true;
+            vm.pending=0;
             }
             else{
               

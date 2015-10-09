@@ -5,13 +5,15 @@ function pizzaCtrl(pizzaserv,$location,$scope){
         vm.details.success(function(data){
         vm.details1=data;
     });
+        vm.showmessage=false;
 $scope.isCollapsed = true;
         vm.login=function(){
          if(vm.user ==='admin'&& vm.password ==='admin'){
             $location.path('login');
         }
          else{
-            window.alert("login failed!Try again");
+            //window.alert("login failed!Try again");
+            vm.showmessage=true;
         }
     };
 }

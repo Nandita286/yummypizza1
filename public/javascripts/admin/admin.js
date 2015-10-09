@@ -4,7 +4,7 @@
 angular.module('admin').config(function($routeProvider) {
 
     $routeProvider.when('/login',{templateUrl: 'admin/adminview/adminview.html',controller:'loginCtrl',
-            controllerAs:'lctrl'});
+            controllerAs:'vm'});
     /* Add New Routes Above */
 
 });

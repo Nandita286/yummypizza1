@@ -4,10 +4,11 @@
           vm.details = pizzadescserv.p2();
           console.log(vm.details);
           vm.total=pizzadescserv.p3();
-
+          vm.showmessage=false;
           if(vm.details.length === 0){
-            window.alert("Your Cart is empty");
-            $location.path('/');
+            vm.showmessage=true;
+            // window.alert("Your Cart is empty");
+            // $location.path('/');
           }
 
           else{

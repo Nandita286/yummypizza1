@@ -1,3 +1,4 @@
+ <span ng-show="!vm.showmessage1">
  <table class="table" style="width:100%">
  <tr class="danger">
  <th>Customername:</th>
@@ -6,7 +7,7 @@
  <th>Order</th>
  <th>Delivery status</th>
 </tr>
-<tr class="success"ng-repeat="pizza in lctrl.details">
+<tr class="success"ng-repeat="pizza in vm.details">
 
 <td>{{pizza.fname}}</td>
 <td>{{pizza.add}}</td>
@@ -18,11 +19,18 @@
            <li>Cost:{{i.cost}}</li>
            </ul>
            </td>
-           <td><button ng-click="lctrl.delivered(pizza._id)">deliver</button></td>
+           <td><button ng-click="vm.delivered(pizza._id)">deliver</button></td>
            </tr>
            </table>
            <div class="row" width="100%">
-        <div class="col-sm-5"><progressbar value="lctrl.deliverycount()">delivered orders</progressbar></div>
+        <div class="col-sm-5"><progressbar value="vm.deliverycount()">delivered orders</progressbar></div>
      
-        <div class="col-sm-5"><progressbar class="progress-striped" value="lctrl.pendingcount()" type="warning">pending</progressbar></div>
+        <div class="col-sm-5"><progressbar class="progress-striped" value="vm.pendingcount()" type="warning">pending</progressbar></div>
+        </div>
+        </span>
+        <div>
+        <center>
+          <span ng-show="vm.showmessage1">No more orders to deliver!</span>
+          <a href="#/">back</a>
+        </center>
         </div>
